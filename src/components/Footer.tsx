@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="bg-[#0d0b09]">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-1">
@@ -17,14 +17,14 @@ export function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-muted">
+            <p className="mt-4 text-sm leading-relaxed text-white/50">
               Your one-stop auto repair center with 30+ years of experience.
               Everything your car needs, all in one building.
             </p>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/80">
               Quick Links
             </h3>
             <ul className="space-y-3">
@@ -37,7 +37,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted transition-colors hover:text-primary"
+                    className="text-sm text-white/50 transition-colors hover:text-primary"
                   >
                     {link.label}
                   </Link>
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/80">
               Services
             </h3>
             <ul className="space-y-3">
@@ -62,7 +62,7 @@ export function Footer() {
                 <li key={service}>
                   <Link
                     href="/services"
-                    className="text-sm text-muted transition-colors hover:text-primary"
+                    className="text-sm text-white/50 transition-colors hover:text-primary"
                   >
                     {service}
                   </Link>
@@ -72,13 +72,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white/80">
               Contact Info
             </h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-primary" />
-                <span className="text-sm text-muted">
+                <span className="text-sm text-white/50">
                   1105 Spartanburg Hwy
                   <br />
                   Hendersonville, NC 28792
@@ -88,14 +88,14 @@ export function Footer() {
                 <Phone size={18} className="shrink-0 text-primary" />
                 <a
                   href="tel:+18289898985"
-                  className="text-sm text-muted transition-colors hover:text-primary"
+                  className="text-sm text-white/50 transition-colors hover:text-primary"
                 >
                   (828) 989-8985
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={18} className="mt-0.5 shrink-0 text-primary" />
-                <span className="text-sm text-muted">
+                <span className="text-sm text-white/50">
                   Mon–Fri: 8AM – 7PM
                   <br />
                   Sat: 8AM – 5PM
@@ -107,7 +107,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted">
+        <div className="mt-12 border-t border-white/10 pt-8 text-center text-sm text-white/30">
           &copy; {new Date().getFullYear()} LAV Motors. All rights reserved.
         </div>
       </div>

@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0d0b09;
-  --color-foreground: #f5f0e8;
+  --color-background: #faf9f6;
+  --color-foreground: #1a1510;
   --color-primary: #c9932c;
   --color-primary-dark: #a87820;
-  --color-accent: #e8cc76;
+  --color-accent: #b8841e;
   --color-gold: #c9932c;
   --color-gold-light: #e8cc76;
-  --color-surface: #131109;
-  --color-surface-light: #1c1810;
-  --color-muted: #8a8070;
-  --color-border: #2a2318;
+  --color-surface: #f0ece4;
+  --color-surface-light: #e6e0d5;
+  --color-muted: #6b6055;
+  --color-border: #d8d0c4;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -30,7 +30,7 @@ html {
 .bg-dot-grid {
   background-image: radial-gradient(
     circle,
-    rgba(201, 147, 44, 0.07) 1px,
+    rgba(201, 147, 44, 0.08) 1px,
     transparent 1px
   );
   background-size: 30px 30px;
@@ -38,14 +38,14 @@ html {
 
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, #c9932c 0%, #e8cc76 100%);
+  background: linear-gradient(135deg, #c9932c 0%, #a87820 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .text-gradient-gold {
-  background: linear-gradient(135deg, #c9932c 0%, #e8cc76 100%);
+  background: linear-gradient(135deg, #c9932c 0%, #a87820 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

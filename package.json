@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "geist": "^1.7.0",
     "lucide-react": "^0.577.0",
     "next": "16.1.7",
     "next-sitemap": "^4.2.3",

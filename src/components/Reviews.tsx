@@ -2,8 +2,7 @@ import { Star, ExternalLink } from "lucide-react";
 
 export function Reviews() {
   return (
-    <section className="relative py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-surface/20 to-background" />
+    <section className="relative py-24 bg-surface">
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
@@ -19,7 +18,7 @@ export function Reviews() {
 
         {/* Rating badge */}
         <div className="mt-10 flex justify-center">
-          <div className="flex items-center gap-4 rounded-2xl border border-border bg-surface px-8 py-6">
+          <div className="flex items-center gap-4 rounded-2xl border border-border bg-white px-8 py-6 shadow-sm">
             <div className="text-center">
               <div className="text-5xl font-bold text-primary">4.5</div>
               <div className="mt-1 flex justify-center gap-0.5">
@@ -44,13 +43,12 @@ export function Reviews() {
           </div>
         </div>
 
-        {/* CTA to Google */}
         <div className="mt-8 text-center">
           <a
             href="https://maps.google.com/?q=LAV+Motors+1105+Spartanburg+Hwy+Hendersonville+NC"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-light px-8 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/40 hover:text-primary"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-8 py-3.5 text-sm font-semibold text-foreground shadow-sm transition-all hover:border-primary/40 hover:text-primary"
           >
             Read Our Reviews on Google
             <ExternalLink size={15} />

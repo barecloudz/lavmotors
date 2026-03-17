@@ -12,18 +12,17 @@ const highlights = [
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
-      {/* Background layers */}
       <div className="absolute inset-0 bg-background" />
       <div className="bg-dot-grid absolute inset-0" />
-      <div className="absolute right-0 top-0 h-[700px] w-[700px] rounded-full bg-primary/6 blur-[140px]" />
-      <div className="absolute -bottom-20 left-0 h-[500px] w-[500px] rounded-full bg-accent/4 blur-[120px]" />
+      <div className="absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-primary/6 blur-[140px]" />
+      <div className="absolute -bottom-20 left-0 h-[400px] w-[400px] rounded-full bg-primary/4 blur-[120px]" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 
           {/* Left: Content */}
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-4 py-2 text-sm font-medium text-primary">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/8 px-4 py-2 text-sm font-medium text-primary">
               <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
               Official NC Inspection Station
             </div>
@@ -50,7 +49,7 @@ export function Hero() {
               </a>
               <Link
                 href="/services"
-                className="flex items-center justify-center gap-2.5 rounded-full border border-border bg-surface-light px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-primary/40 hover:bg-surface"
+                className="flex items-center justify-center gap-2.5 rounded-full border border-border bg-surface px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-primary/40 hover:bg-surface-light"
               >
                 Our Services
                 <ArrowRight size={20} />
@@ -82,7 +81,7 @@ export function Hero() {
 
           {/* Right: Info Card — desktop only */}
           <div className="hidden lg:block">
-            <div className="rounded-3xl border border-border bg-surface p-8 shadow-2xl shadow-black/40">
+            <div className="rounded-3xl border border-border bg-white p-8 shadow-xl shadow-black/5">
               {/* Header */}
               <div className="mb-6 flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -94,14 +93,14 @@ export function Hero() {
                   </div>
                   <div className="text-xs text-muted">Walk-ins welcome</div>
                 </div>
-                <div className="ml-auto flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-400">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
+                <div className="ml-auto flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700">
+                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
                   Open Now
                 </div>
               </div>
 
               {/* Hours */}
-              <div className="mb-6 space-y-2 rounded-2xl border border-border bg-surface-light p-4 text-sm">
+              <div className="mb-6 space-y-2 rounded-2xl border border-border bg-surface p-4 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted">Mon – Fri</span>
                   <span className="font-medium text-foreground">8AM – 7PM</span>
@@ -112,7 +111,7 @@ export function Hero() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted">Sunday</span>
-                  <span className="font-medium text-foreground/40">Closed</span>
+                  <span className="font-medium text-muted">Closed</span>
                 </div>
               </div>
 
@@ -127,7 +126,7 @@ export function Hero() {
               </div>
 
               {/* Address + CTA */}
-              <div className="rounded-2xl border border-border bg-surface-light p-4">
+              <div className="rounded-2xl border border-border bg-surface p-4">
                 <div className="flex items-start gap-3">
                   <MapPin size={16} className="mt-0.5 shrink-0 text-primary" />
                   <div>

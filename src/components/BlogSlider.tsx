@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+import Link from "next/link";
 
 const posts = [
   {
@@ -10,7 +11,7 @@ const posts = [
     readTime: "4 min read",
     excerpt:
       "Owning a car requires more than occasional washing and refueling. Learn what it takes to keep your vehicle running smoothly and safely with professional auto services.",
-    slug: "#",
+    slug: "/blog/professional-automotive-services",
   },
   {
     title: "Enhance Your Ride with Professional Automotive Services",
@@ -18,7 +19,7 @@ const posts = [
     readTime: "3 min read",
     excerpt:
       "Whether you need routine maintenance or a major repair, expert care can make all the difference. Discover how professional services keep your vehicle in peak condition.",
-    slug: "#",
+    slug: "/blog/enhance-your-ride",
   },
   {
     title: "Expert Wheel and Tire Services for Your Vehicle",
@@ -26,7 +27,7 @@ const posts = [
     readTime: "4 min read",
     excerpt:
       "Your tires are the only parts of your vehicle that touch the road. Learn how expert wheel and tire care ensures safety, performance, and peace of mind on every drive.",
-    slug: "#",
+    slug: "/blog/wheel-and-tire-services",
   },
 ];
 
@@ -38,8 +39,7 @@ export function BlogSlider() {
 
   return (
     <section className="relative py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-surface/20 to-background" />
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="flex items-end justify-between">
           <div>
@@ -54,14 +54,14 @@ export function BlogSlider() {
             <button
               onClick={prev}
               aria-label="Previous post"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-muted transition-all hover:border-primary/40 hover:text-foreground"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-muted shadow-sm transition-all hover:border-primary/40 hover:text-foreground"
             >
               <ArrowLeft size={18} />
             </button>
             <button
               onClick={next}
               aria-label="Next post"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-muted transition-all hover:border-primary/40 hover:text-foreground"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-muted shadow-sm transition-all hover:border-primary/40 hover:text-foreground"
             >
               <ArrowRight size={18} />
             </button>
@@ -75,38 +75,40 @@ export function BlogSlider() {
             return (
               <div
                 key={post.title}
-                className={`relative flex flex-col overflow-hidden rounded-2xl border p-8 transition-all duration-300 ${
+                className={`relative flex flex-col overflow-hidden rounded-2xl border transition-all duration-300 ${
                   isActive
-                    ? "border-primary/40 bg-surface shadow-xl shadow-primary/5"
-                    : "border-border bg-surface opacity-60 hover:opacity-80"
+                    ? "border-primary/30 bg-white shadow-xl shadow-black/5"
+                    : "border-border bg-white opacity-60 shadow-sm hover:opacity-80"
                 }`}
               >
                 {isActive && (
-                  <div className="absolute right-0 top-0 h-px w-2/3 bg-gradient-to-l from-transparent via-primary/40 to-transparent" />
+                  <div className="h-1 w-full bg-gradient-to-r from-primary to-accent" />
                 )}
 
-                <div className="flex items-center gap-3 text-xs text-muted">
-                  <span>{post.date}</span>
-                  <span className="h-1 w-1 rounded-full bg-border" />
-                  <Clock size={12} />
-                  <span>{post.readTime}</span>
+                <div className="flex flex-1 flex-col p-7">
+                  <div className="flex items-center gap-3 text-xs text-muted">
+                    <span>{post.date}</span>
+                    <span className="h-1 w-1 rounded-full bg-border" />
+                    <Clock size={12} />
+                    <span>{post.readTime}</span>
+                  </div>
+
+                  <h3 className="mt-4 text-lg font-semibold leading-snug text-foreground">
+                    {post.title}
+                  </h3>
+
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                    {post.excerpt}
+                  </p>
+
+                  <Link
+                    href={post.slug}
+                    className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
+                  >
+                    Read more
+                    <ArrowRight size={14} />
+                  </Link>
                 </div>
-
-                <h3 className="mt-4 text-lg font-semibold leading-snug text-foreground">
-                  {post.title}
-                </h3>
-
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
-                  {post.excerpt}
-                </p>
-
-                <a
-                  href={post.slug}
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-accent"
-                >
-                  Read more
-                  <ArrowRight size={14} />
-                </a>
               </div>
             );
           })}

@@ -16,7 +16,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-surface/90 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0d0b09]/95 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center">
           <Image
@@ -34,14 +34,14 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted transition-colors hover:text-foreground"
+              className="text-sm font-medium text-white/60 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
           ))}
           <a
             href="tel:+18289898985"
-            className="flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-background transition-all hover:bg-primary-dark"
+            className="flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-primary-dark"
           >
             <Phone size={16} />
             (828) 989-8985
@@ -49,7 +49,7 @@ export function Navbar() {
         </div>
 
         <button
-          className="text-foreground md:hidden"
+          className="text-white md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -58,21 +58,21 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-surface md:hidden">
+        <div className="border-t border-white/10 bg-[#0d0b09] md:hidden">
           <div className="flex flex-col gap-1 px-6 py-4">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-4 py-3 text-sm font-medium text-muted transition-colors hover:bg-surface-light hover:text-foreground"
+                className="rounded-lg px-4 py-3 text-sm font-medium text-white/60 transition-colors hover:bg-white/5 hover:text-white"
               >
                 {link.label}
               </Link>
             ))}
             <a
               href="tel:+18289898985"
-              className="mt-2 flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-background"
+              className="mt-2 flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white"
             >
               <Phone size={16} />
               (828) 989-8985
