@@ -1,4 +1,5 @@
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer() {
@@ -7,19 +8,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary font-bold text-white text-lg">
-                L
-              </div>
-              <div>
-                <span className="text-xl font-bold tracking-tight text-foreground">
-                  LAV Motors
-                </span>
-                <span className="block text-[10px] uppercase tracking-widest text-muted">
-                  Luxury Auto Vehicles
-                </span>
-              </div>
-            </div>
+            <Link href="/">
+              <Image
+                src="/logo.jpeg"
+                alt="LAV Motors"
+                width={140}
+                height={70}
+                className="h-14 w-auto object-contain"
+              />
+            </Link>
             <p className="mt-4 text-sm leading-relaxed text-muted">
               Your one-stop auto repair center with 30+ years of experience.
               Everything your car needs, all in one building.

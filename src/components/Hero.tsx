@@ -29,9 +29,9 @@ export function Hero() {
             </div>
 
             <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-              Expert Auto Care
+              Auto Repair
               <br />
-              <span className="text-gradient">You Can Trust</span>
+              <span className="text-gradient">Hendersonville</span>
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
