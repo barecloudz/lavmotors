@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | LAV Motors",
   },
   description:
-    "LAV Motors (Luxury Auto Vehicles) — trusted auto repair, tire sales, detailing & NC inspections in Hendersonville, NC. 30+ years experience. Call (828) 989-8985.",
+    "LAV Motors (Luxury Auto Vehicles). Trusted auto repair, tire sales, detailing and NC inspections in Hendersonville, NC. 30+ years experience. Call (828) 989-8985.",
   keywords: [
     "auto repair Hendersonville NC",
     "tire shop Hendersonville",

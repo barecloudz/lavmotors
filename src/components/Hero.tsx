@@ -3,11 +3,11 @@ import Link from "next/link";
 import { OpenStatus } from "@/components/OpenStatus";
 
 const highlights = [
-  "NC State Inspections — $13.60",
+  "NC State Inspections: $13.60",
   "Oil Changes from $85",
-  "Wheel Alignment — $140",
+  "Wheel Alignment: $140",
   "Full Detailing from $249",
-  "Tires In Stock — All Sizes",
+  "Tires In Stock, All Sizes",
 ];
 
 export function Hero() {
@@ -35,7 +35,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
-              From routine oil changes to complex repairs — LAV Motors has been
+              From routine oil changes to complex repairs, LAV Motors has been
               keeping Hendersonville on the road for over 30 years. All services
               under one roof.
             </p>

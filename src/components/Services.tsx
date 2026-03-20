@@ -16,7 +16,7 @@ export function Services() {
             Our Services
           </h2>
           <p className="mt-4 text-lg text-muted">
-            Everything your car needs — all under one roof
+            Everything your car needs, all under one roof.
           </p>
         </Reveal>
 

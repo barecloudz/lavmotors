@@ -152,7 +152,7 @@ export default function BlogPost() {
             <p className="mt-3">
               Don&apos;t wait for a warning light or strange noise to take
               action. LAV Motors offers comprehensive automotive services tailored
-              to keep your car in peak condition — with experienced technicians,
+              to keep your car in peak condition. Experienced technicians,
               transparent pricing, and flexible scheduling.
             </p>
             <a

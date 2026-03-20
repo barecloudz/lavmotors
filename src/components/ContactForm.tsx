@@ -50,8 +50,7 @@ export function ContactForm() {
           Message Received
         </h3>
         <p className="mt-3 text-muted">
-          We&apos;ll get back to you as soon as possible — usually within a few
-          hours during business hours.
+          We&apos;ll get back to you within a few hours during business hours.
         </p>
         <p className="mt-2 text-sm text-muted">
           For faster service, call us at{" "}

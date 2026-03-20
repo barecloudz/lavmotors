@@ -222,7 +222,7 @@ export default async function ServicePage({ params }: Props) {
             Ready to Get It Fixed?
           </h3>
           <p className="mt-2 text-sm text-muted">
-            Call us or stop by — no appointment needed for most services.
+            Call us or stop by. No appointment needed for most services.
             We&apos;re on Spartanburg Hwy in Hendersonville.
           </p>
           <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">

@@ -13,7 +13,7 @@ export function Reviews() {
             Trusted by Hendersonville
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
-            Don&apos;t just take our word for it — see what our customers say on
+            Don&apos;t just take our word for it. See what our customers say on
             Google.
           </p>
         </Reveal>

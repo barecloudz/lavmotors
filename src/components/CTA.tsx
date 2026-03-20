@@ -20,8 +20,8 @@ export function CTA() {
               <span className="text-gradient">On the Road</span>
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-lg text-white/60">
-              Walk-ins welcome for most services. Give us a call or swing by —
-              we&apos;re here Monday through Saturday.
+              Walk-ins welcome for most services. Give us a call or swing by.
+              We&apos;re here Monday through Saturday.
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

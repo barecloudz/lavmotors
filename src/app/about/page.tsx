@@ -4,7 +4,7 @@ import { Shield, Users, Clock, Award } from "lucide-react";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about LAV Motors (Luxury Auto Vehicles) — Hendersonville's trusted auto repair center with 30+ years of experience.",
+    "Learn about LAV Motors (Luxury Auto Vehicles), Hendersonville's trusted auto repair center with 30+ years of experience.",
 };
 
 const values = [
@@ -48,16 +48,14 @@ export default function AboutPage() {
                 Luxury Auto Vehicles
               </p>
               <p className="mt-6 text-lg leading-relaxed text-muted">
-                Welcome to LAV Motors — your complete auto repair center, tire
+                Welcome to LAV Motors, your complete auto repair center, tire
                 dealer, and auto detailing center in Hendersonville, North
                 Carolina.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted">
-                No matter what automotive service you require — from routine
-                maintenance to complex repair — our extremely high level
+                From routine maintenance to complex repairs, our team of
                 professionals with 30+ years of experience in the field are
-                ready to help. All you need to do about your car, in one
-                building.
+                ready to help. Everything your car needs, in one building.
               </p>
               <p className="mt-4 text-lg leading-relaxed text-muted">
                 As an official NC Inspection Station, we&apos;re proud to serve

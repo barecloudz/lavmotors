@@ -82,7 +82,7 @@ export default function BlogPost() {
             },
             {
               title: "Tire Repair",
-              body: "Not all tire damage requires replacement. We inspect punctures and cuts to determine if a safe repair is possible — saving you money while keeping you on the road.",
+              body: "Not all tire damage requires replacement. We inspect punctures and cuts to determine if a safe repair is possible, saving you money while keeping you on the road.",
             },
           ].map((s) => (
             <div key={s.title}>
@@ -96,7 +96,7 @@ export default function BlogPost() {
           </h2>
           <ul className="space-y-3 pl-4">
             {[
-              "Visible Tread Wear: Use the penny test — insert a penny into the tread with Lincoln's head upside down. If you see the top of his head, it's time for new tires.",
+              "Visible Tread Wear: Use the penny test. Insert a penny into the tread with Lincoln's head upside down. If you see the top of his head, it's time for new tires.",
               "Vibrations While Driving: This could indicate unbalanced tires or alignment issues.",
               "Pulling to One Side: Your car drifting left or right suggests misalignment.",
               "Cracks or Bulges: Sidewall damage is dangerous and requires immediate attention.",
@@ -134,7 +134,7 @@ export default function BlogPost() {
             <p className="mt-3">
               At LAV Motors, we understand how important your vehicle is to you.
               We carry a full inventory of tires and offer installation,
-              rotation, balancing, alignment, and repair — all under one roof.
+              rotation, balancing, alignment, and repair, all under one roof.
               Stop by or call to schedule your tire service today.
             </p>
             <a

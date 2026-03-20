@@ -19,12 +19,13 @@ export default function ServicesPage() {
               Our Services
             </h1>
             <p className="mt-3 text-5xl font-bold tracking-tight text-foreground">
-              Complete Auto Care
+              Everything Under One Roof
             </p>
             <p className="mt-6 text-lg leading-relaxed text-muted">
-              No matter what automotive service you require — from routine
-              maintenance to complex repair — our team of professionals with 30+
-              years of experience has you covered.
+              Whether it&apos;s a routine oil change or a repair that&apos;s
+              been keeping you up at night, our team has been handling it all
+              right here in Hendersonville for over 30 years. Pick a service
+              below to learn more.
             </p>
           </div>
         </div>
@@ -71,10 +72,11 @@ export default function ServicesPage() {
       <section className="border-t border-border bg-surface py-16">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <h2 className="text-3xl font-bold text-foreground">
-            Need a Service?
+            Not Sure What You Need?
           </h2>
           <p className="mt-4 text-muted">
-            Give us a call or stop by — no appointment needed for most services.
+            Give us a call and describe what&apos;s going on. We&apos;ll point
+            you in the right direction. No appointment needed for most services.
           </p>
           <a
             href="tel:+18289898985"
