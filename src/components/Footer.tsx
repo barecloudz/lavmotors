@@ -52,19 +52,19 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {[
-                "Auto Repair",
-                "Tire Sales & Service",
-                "Auto Detailing",
-                "NC State Inspections",
-                "Oil Changes",
-                "Wheel Alignments",
-              ].map((service) => (
-                <li key={service}>
+                { label: "NC State Inspection", slug: "nc-state-inspection" },
+                { label: "Tires", slug: "tires" },
+                { label: "Oil Change", slug: "oil-change" },
+                { label: "Wheel Alignment", slug: "wheel-alignment" },
+                { label: "Brake Service", slug: "brake-service" },
+                { label: "Diagnostic Check", slug: "diagnostic-check" },
+              ].map((s) => (
+                <li key={s.slug}>
                   <Link
-                    href="/services"
+                    href={`/services/${s.slug}`}
                     className="text-sm text-white/50 transition-colors hover:text-primary"
                   >
-                    {service}
+                    {s.label}
                   </Link>
                 </li>
               ))}

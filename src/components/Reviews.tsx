@@ -1,10 +1,11 @@
 import { Star, ExternalLink } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 
 export function Reviews() {
   return (
-    <section className="relative py-24 bg-surface">
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="text-center">
+    <section className="relative bg-surface py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
             Google Reviews
           </p>
@@ -12,13 +13,13 @@ export function Reviews() {
             Trusted by Hendersonville
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-muted">
-            Don&apos;t just take our word for it — see what our customers say on Google.
+            Don&apos;t just take our word for it — see what our customers say on
+            Google.
           </p>
-        </div>
+        </Reveal>
 
-        {/* Rating badge */}
-        <div className="mt-10 flex justify-center">
-          <div className="flex items-center gap-4 rounded-2xl border border-border bg-white px-8 py-6 shadow-sm">
+        <Reveal className="mt-10 flex justify-center" delay={1}>
+          <div className="flex items-center gap-6 rounded-2xl border border-border bg-white px-8 py-6 shadow-sm">
             <div className="text-center">
               <div className="text-5xl font-bold text-primary">4.5</div>
               <div className="mt-1 flex justify-center gap-0.5">
@@ -37,13 +38,15 @@ export function Reviews() {
             </div>
             <div className="h-16 w-px bg-border" />
             <div>
-              <div className="text-lg font-semibold text-foreground">100+ Reviews</div>
+              <div className="text-lg font-semibold text-foreground">
+                100+ Reviews
+              </div>
               <div className="text-sm text-muted">on Google Maps</div>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mt-8 text-center">
+        <Reveal className="mt-8 text-center" delay={2}>
           <a
             href="https://maps.google.com/?q=LAV+Motors+1105+Spartanburg+Hwy+Hendersonville+NC"
             target="_blank"
@@ -53,7 +56,7 @@ export function Reviews() {
             Read Our Reviews on Google
             <ExternalLink size={15} />
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

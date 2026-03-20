@@ -1,5 +1,6 @@
 import { Phone, ArrowRight, MapPin, Clock, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import { OpenStatus } from "@/components/OpenStatus";
 
 const highlights = [
   "NC State Inspections — $13.60",
@@ -93,10 +94,7 @@ export function Hero() {
                   </div>
                   <div className="text-xs text-muted">Walk-ins welcome</div>
                 </div>
-                <div className="ml-auto flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700">
-                  <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" />
-                  Open Now
-                </div>
+                <OpenStatus />
               </div>
 
               {/* Hours */}

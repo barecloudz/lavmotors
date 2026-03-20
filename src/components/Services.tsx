@@ -1,96 +1,14 @@
-import {
-  Wrench,
-  CircleDot,
-  Sparkles,
-  ClipboardCheck,
-  Droplets,
-  AlignCenter,
-  CarFront,
-  Thermometer,
-  ArrowRight,
-} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const services = [
-  {
-    icon: ClipboardCheck,
-    title: "NC State Inspection",
-    description: "Official NC inspection station. Quick, reliable inspections.",
-    price: "$13.60",
-    highlight: true,
-    image: null,
-  },
-  {
-    icon: CircleDot,
-    title: "Tires",
-    description:
-      "Full tire inventory in stock. Mounting, balancing, rotation, and flat repair.",
-    price: "Varies by size",
-    highlight: false,
-    image: "/tires.avif",
-  },
-  {
-    icon: Droplets,
-    title: "Oil Change",
-    description:
-      "Conventional and synthetic oil changes with filter replacement and fluid top-off.",
-    price: "From $85",
-    highlight: false,
-    image: "/oil-change.avif",
-  },
-  {
-    icon: AlignCenter,
-    title: "Wheel Alignment",
-    description:
-      "Precision alignment to extend tire life and improve handling.",
-    price: "$140",
-    highlight: false,
-    image: "/car-alignment.avif",
-  },
-  {
-    icon: Wrench,
-    title: "Brake Service",
-    description:
-      "Brake pad, rotor, and fluid inspection and replacement by certified technicians.",
-    price: "Variable",
-    highlight: false,
-    image: "/brake-service.avif",
-  },
-  {
-    icon: Thermometer,
-    title: "A/C Service",
-    description:
-      "Air conditioning inspection, recharge, and repair for year-round comfort.",
-    price: "Variable",
-    highlight: false,
-    image: "/ac-services.avif",
-  },
-  {
-    icon: CarFront,
-    title: "Pre-Purchase Inspection",
-    description:
-      "Thorough inspection before you buy — know exactly what you're getting.",
-    price: "$145",
-    highlight: false,
-    image: "/pre-purchase-inspection.avif",
-  },
-  {
-    icon: Sparkles,
-    title: "Diagnostic Check",
-    description:
-      "Advanced diagnostics to pinpoint issues before they become costly repairs.",
-    price: "From $60",
-    highlight: false,
-    image: "/diagnostic-check.avif",
-  },
-];
+import { ArrowRight } from "lucide-react";
+import { services } from "@/lib/services-data";
+import { Reveal } from "@/components/Reveal";
 
 export function Services() {
   return (
     <section id="services" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center">
+        <Reveal className="text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">
             What We Do
           </p>
@@ -100,12 +18,13 @@ export function Services() {
           <p className="mt-4 text-lg text-muted">
             Everything your car needs — all under one roof
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
-            <div
-              key={service.title}
+            <Link
+              key={service.slug}
+              href={`/services/${service.slug}`}
               className={`group relative flex flex-col overflow-hidden rounded-2xl border transition-all hover:shadow-xl hover:shadow-black/8 ${
                 service.highlight
                   ? "border-primary/40 bg-white"
@@ -146,16 +65,20 @@ export function Services() {
                 </div>
 
                 <p className="mt-3 flex-1 text-xs leading-relaxed text-muted">
-                  {service.description}
+                  {service.shortDescription}
                 </p>
 
-                <div className="mt-4 border-t border-border pt-4">
+                <div className="mt-4 flex items-center justify-between border-t border-border pt-4">
                   <span className="text-sm font-bold text-primary">
                     {service.price}
                   </span>
+                  <ArrowRight
+                    size={16}
+                    className="text-muted transition-transform group-hover:translate-x-1 group-hover:text-primary"
+                  />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

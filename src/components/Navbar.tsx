@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Phone } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -13,7 +13,7 @@ const navLinks = [
 ];
 
 export function Navbar() {
-  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0d0b09]/95 backdrop-blur-xl">
@@ -30,15 +30,25 @@ export function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-white/60 transition-colors hover:text-white"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors ${
+                  isActive
+                    ? "text-primary"
+                    : "text-white/60 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <a
             href="tel:+18289898985"
             className="flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-primary-dark"
@@ -48,38 +58,15 @@ export function Navbar() {
           </a>
         </div>
 
-        <button
-          className="text-white md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+        {/* Mobile: call button only — bottom nav handles page navigation */}
+        <a
+          href="tel:+18289898985"
+          className="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-primary-dark md:hidden"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <Phone size={15} />
+          Call Now
+        </a>
       </div>
-
-      {open && (
-        <div className="border-t border-white/10 bg-[#0d0b09] md:hidden">
-          <div className="flex flex-col gap-1 px-6 py-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-4 py-3 text-sm font-medium text-white/60 transition-colors hover:bg-white/5 hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
-            <a
-              href="tel:+18289898985"
-              className="mt-2 flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white"
-            >
-              <Phone size={16} />
-              (828) 989-8985
-            </a>
-          </div>
-        </div>
-      )}
     </nav>
   );
 }

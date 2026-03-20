@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
+import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -20,17 +21,16 @@ export default function ContactPage() {
               Get In Touch
             </p>
             <p className="mt-6 text-lg leading-relaxed text-muted">
-              Have a question or need to schedule a service? Reach out to us by
-              phone or stop by the shop. No appointment needed for most
-              services.
+              Have a question or need to schedule a service? Call us, stop by,
+              or fill out the form and we&apos;ll get back to you.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="pb-24">
+      <section className="pb-12">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-3">
             <div className="rounded-2xl border border-border bg-surface p-8 text-center transition-all hover:border-primary/30">
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                 <Phone size={28} />
@@ -45,7 +45,7 @@ export default function ContactPage() {
                 (828) 989-8985
               </a>
               <p className="mt-2 text-sm text-muted">
-                Call for quotes, questions, or to check on your vehicle
+                Best for quotes, quick questions, and same-day service
               </p>
             </div>
 
@@ -80,15 +80,11 @@ export default function ContactPage() {
               <div className="mt-3 space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-muted">Monday – Friday</span>
-                  <span className="font-medium text-foreground">
-                    8AM – 7PM
-                  </span>
+                  <span className="font-medium text-foreground">8AM – 7PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted">Saturday</span>
-                  <span className="font-medium text-foreground">
-                    8AM – 5PM
-                  </span>
+                  <span className="font-medium text-foreground">8AM – 5PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted">Sunday</span>
@@ -100,19 +96,23 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Contact form + map side by side */}
       <section className="pb-24">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="overflow-hidden rounded-3xl border border-border">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.5!2d-82.4468!3d35.3185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDE5JzA2LjYiTiA4MsKwMjYnNDguNSJX!5e0!3m2!1sen!2sus!4v1"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="LAV Motors Location"
-            />
+          <div className="grid gap-8 lg:grid-cols-2">
+            <ContactForm />
+            <div className="overflow-hidden rounded-3xl border border-border">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.5!2d-82.4468!3d35.3185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDE5JzA2LjYiTiA4MsKwMjYnNDguNSJX!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: "400px" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="LAV Motors Location"
+              />
+            </div>
           </div>
         </div>
       </section>
