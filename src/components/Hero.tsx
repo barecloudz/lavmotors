@@ -13,17 +13,19 @@ const highlights = [
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
+    <section className="relative flex min-h-screen w-full items-center overflow-hidden pt-16">
       {/* Background photo */}
       <Image
         src="/hero.jpeg"
         alt="LAV Motors auto repair shop"
         fill
         className="object-cover object-center"
+        sizes="100vw"
         priority
       />
-      {/* Overlay — gradient heavier on left where text lives */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/45" />
+      {/* Base dark tint + directional gradient */}
+      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -35,13 +37,13 @@ export function Hero() {
               Official NC Inspection Station
             </div>
 
-            <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="text-5xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Auto Repair
               <br />
               <span className="text-gradient">Hendersonville</span>
             </h1>
 
-            <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted">
+            <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/80">
               From routine oil changes to complex repairs, LAV Motors has been
               keeping Hendersonville on the road for over 30 years. All services
               under one roof.
@@ -57,7 +59,7 @@ export function Hero() {
               </a>
               <Link
                 href="/services"
-                className="flex items-center justify-center gap-2.5 rounded-full border border-border bg-surface px-8 py-4 text-base font-semibold text-foreground transition-all hover:border-primary/40 hover:bg-surface-light"
+                className="flex items-center justify-center gap-2.5 rounded-full border border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
               >
                 Our Services
                 <ArrowRight size={20} />
@@ -65,22 +67,22 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="mt-14 grid grid-cols-3 gap-6 border-t border-border pt-8">
+            <div className="mt-14 grid grid-cols-3 gap-6 border-t border-white/20 pt-8">
               <div>
                 <div className="text-3xl font-bold text-primary">30+</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-muted">
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
                   Years Experience
                 </div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary">4.5★</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-muted">
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
                   Google Rating
                 </div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-primary">100+</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-muted">
+                <div className="mt-1 text-xs uppercase tracking-wider text-white/60">
                   Happy Reviews
                 </div>
               </div>
