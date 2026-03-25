@@ -1,6 +1,7 @@
 [build]
   command = "npm run build && npx next-sitemap"
   publish = "out"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"

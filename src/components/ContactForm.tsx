@@ -18,6 +18,7 @@ const services = [
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,15 +27,22 @@ export function ContactForm() {
     const data = new FormData(form);
 
     try {
-      await fetch("/", {
+      const res = await fetch("/.netlify/functions/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: data.get("name"),
+          email: data.get("email"),
+          phone: data.get("phone"),
+          service: data.get("service"),
+          vehicle: data.get("vehicle"),
+          message: data.get("message"),
+        }),
       });
+      if (!res.ok) throw new Error("Send failed");
       setSubmitted(true);
     } catch {
-      // Still show success — Netlify will handle it on the real host
-      setSubmitted(true);
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -69,14 +77,13 @@ export function ContactForm() {
         We&apos;ll get back to you within a few hours during business hours.
       </p>
 
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        onSubmit={handleSubmit}
-        className="mt-8 space-y-5"
-      >
-        <input type="hidden" name="form-name" value="contact" />
+      {error && (
+        <p className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+          Something went wrong. Please call us at{" "}
+          <a href="tel:+18289898985" className="font-semibold underline">(828) 989-8985</a>.
+        </p>
+      )}
+      <form onSubmit={handleSubmit} className="mt-8 space-y-5">
 
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
