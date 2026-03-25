@@ -2,7 +2,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = "luxautownc@gmail.com";
-const FROM_EMAIL = "LAV Motors <noreply@lavmotors.com>";
+const FROM_EMAIL = "LAV Motors <support@lavmotors.com>";
 
 function buildEmailHtml({ name, email, phone, service, vehicle, message }) {
   const row = (label, left, right) => `
