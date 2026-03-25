@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { BottomNav } from "@/components/BottomNav";
+import { EstimatorWidget } from "@/components/EstimatorWidget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -89,6 +90,24 @@ export default function RootLayout({
                 reviewCount: "100",
               },
               priceRange: "$$",
+              areaServed: [
+                { "@type": "City", name: "Hendersonville", addressRegion: "NC" },
+                { "@type": "City", name: "Asheville", addressRegion: "NC" },
+                { "@type": "City", name: "Fletcher", addressRegion: "NC" },
+                { "@type": "City", name: "Brevard", addressRegion: "NC" },
+                { "@type": "City", name: "Flat Rock", addressRegion: "NC" },
+                { "@type": "City", name: "Mills River", addressRegion: "NC" },
+                { "@type": "City", name: "Etowah", addressRegion: "NC" },
+                { "@type": "City", name: "Tryon", addressRegion: "NC" },
+                { "@type": "City", name: "Saluda", addressRegion: "NC" },
+                { "@type": "City", name: "Rutherfordton", addressRegion: "NC" },
+                { "@type": "City", name: "Arden", addressRegion: "NC" },
+                { "@type": "City", name: "Laurel Park", addressRegion: "NC" },
+                { "@type": "City", name: "Horse Shoe", addressRegion: "NC" },
+                { "@type": "City", name: "East Flat Rock", addressRegion: "NC" },
+                { "@type": "City", name: "Skyland", addressRegion: "NC" },
+                { "@type": "City", name: "Mountain Home", addressRegion: "NC" },
+              ],
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
@@ -98,18 +117,19 @@ export default function RootLayout({
                     "Wednesday",
                     "Thursday",
                     "Friday",
+                    "Saturday",
                   ],
-                  opens: "08:00",
+                  opens: "09:00",
                   closes: "19:00",
                 },
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: "Saturday",
-                  opens: "08:00",
-                  closes: "17:00",
+                  dayOfWeek: "Sunday",
+                  opens: "12:00",
+                  closes: "19:00",
                 },
               ],
-              sameAs: ["https://www.facebook.com/lavmotors"],
+              sameAs: ["https://www.facebook.com/people/LAV-Motors/61576597244897/"],
             }),
           }}
         />
@@ -121,6 +141,7 @@ export default function RootLayout({
         <main className="pb-16 md:pb-0">{children}</main>
         <Footer />
         <BottomNav />
+        <EstimatorWidget />
       </body>
     </html>
   );

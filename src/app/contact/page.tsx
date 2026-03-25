@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact LAV Motors at (828) 989-8985 or visit us at 1105 Spartanburg Hwy, Hendersonville, NC 28792. Mon-Fri 8AM-7PM, Sat 8AM-5PM.",
+    "Contact LAV Motors at (828) 989-8985 or visit us at 1105 Spartanburg Hwy, Hendersonville, NC 28792. Mon-Sat 9AM-7PM, Sun 12PM-7PM.",
 };
 
 export default function ContactPage() {
@@ -79,16 +79,12 @@ export default function ContactPage() {
               </h2>
               <div className="mt-3 space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted">Monday – Friday</span>
-                  <span className="font-medium text-foreground">8AM – 7PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted">Saturday</span>
-                  <span className="font-medium text-foreground">8AM – 5PM</span>
+                  <span className="text-muted">Monday – Saturday</span>
+                  <span className="font-medium text-foreground">9AM – 7PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted">Sunday</span>
-                  <span className="font-medium text-foreground">Closed</span>
+                  <span className="font-medium text-foreground">12PM – 7PM</span>
                 </div>
               </div>
             </div>

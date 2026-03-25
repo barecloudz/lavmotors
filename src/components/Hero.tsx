@@ -1,5 +1,6 @@
 import { Phone, ArrowRight, MapPin, Clock, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { OpenStatus } from "@/components/OpenStatus";
 
 const highlights = [
@@ -13,10 +14,16 @@ const highlights = [
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-16">
-      <div className="absolute inset-0 bg-background" />
-      <div className="bg-dot-grid absolute inset-0" />
-      <div className="absolute right-0 top-0 h-[600px] w-[600px] rounded-full bg-primary/6 blur-[140px]" />
-      <div className="absolute -bottom-20 left-0 h-[400px] w-[400px] rounded-full bg-primary/4 blur-[120px]" />
+      {/* Background photo */}
+      <Image
+        src="/hero.jpeg"
+        alt="LAV Motors auto repair shop"
+        fill
+        className="object-cover object-center"
+        priority
+      />
+      {/* Overlay — gradient heavier on left where text lives */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/45" />
 
       <div className="relative mx-auto w-full max-w-7xl px-6 py-16 lg:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -100,16 +107,12 @@ export function Hero() {
               {/* Hours */}
               <div className="mb-6 space-y-2 rounded-2xl border border-border bg-surface p-4 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted">Mon – Fri</span>
-                  <span className="font-medium text-foreground">8AM – 7PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted">Saturday</span>
-                  <span className="font-medium text-foreground">8AM – 5PM</span>
+                  <span className="text-muted">Mon – Sat</span>
+                  <span className="font-medium text-foreground">9AM – 7PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted">Sunday</span>
-                  <span className="font-medium text-muted">Closed</span>
+                  <span className="font-medium text-foreground">12PM – 7PM</span>
                 </div>
               </div>
 

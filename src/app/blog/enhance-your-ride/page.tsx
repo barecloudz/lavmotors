@@ -10,7 +10,30 @@ export const metadata: Metadata = {
 
 export default function BlogPost() {
   return (
-    <main className="pt-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: "Enhance Your Ride with Professional Automotive Services",
+            description: "Whether you need routine maintenance or a major repair, expert care can make all the difference. Discover how LAV Motors keeps your vehicle in peak condition.",
+            datePublished: "2025-11-10",
+            dateModified: "2025-11-10",
+            author: { "@type": "Organization", name: "LAV Motors", url: "https://www.lavmotors.com" },
+            publisher: {
+              "@type": "Organization",
+              name: "LAV Motors",
+              url: "https://www.lavmotors.com",
+              logo: { "@type": "ImageObject", url: "https://www.lavmotors.com/logo.jpeg" },
+            },
+            url: "https://www.lavmotors.com/blog/enhance-your-ride",
+            mainEntityOfPage: "https://www.lavmotors.com/blog/enhance-your-ride",
+          }),
+        }}
+      />
+      <main className="pt-20">
       <article className="mx-auto max-w-3xl px-6 py-16">
         <Link
           href="/"
@@ -155,5 +178,6 @@ export default function BlogPost() {
         </div>
       </article>
     </main>
+    </>
   );
 }

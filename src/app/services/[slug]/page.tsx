@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
   return {
     title: service.title,
-    description: service.pas.hook.slice(0, 160),
+    description: `${service.shortDescription} Expert auto service in Hendersonville, NC. Call (828) 989-8985.`,
   };
 }
 
@@ -28,7 +28,7 @@ export default async function ServicePage({ params }: Props) {
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
-  const jsonLd = {
+  const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.title,
@@ -47,19 +47,55 @@ export default async function ServicePage({ params }: Props) {
       },
       url: "https://www.lavmotors.com",
     },
-    areaServed: {
-      "@type": "City",
-      name: "Hendersonville",
-    },
+    areaServed: [
+      { "@type": "City", name: "Hendersonville", addressRegion: "NC" },
+      { "@type": "City", name: "Asheville", addressRegion: "NC" },
+      { "@type": "City", name: "Fletcher", addressRegion: "NC" },
+      { "@type": "City", name: "Brevard", addressRegion: "NC" },
+      { "@type": "City", name: "Flat Rock", addressRegion: "NC" },
+      { "@type": "City", name: "Mills River", addressRegion: "NC" },
+      { "@type": "City", name: "Etowah", addressRegion: "NC" },
+      { "@type": "City", name: "Tryon", addressRegion: "NC" },
+      { "@type": "City", name: "Saluda", addressRegion: "NC" },
+      { "@type": "City", name: "Rutherfordton", addressRegion: "NC" },
+      { "@type": "City", name: "Arden", addressRegion: "NC" },
+      { "@type": "City", name: "Laurel Park", addressRegion: "NC" },
+      { "@type": "City", name: "Horse Shoe", addressRegion: "NC" },
+      { "@type": "City", name: "East Flat Rock", addressRegion: "NC" },
+      { "@type": "City", name: "Skyland", addressRegion: "NC" },
+      { "@type": "City", name: "Mountain Home", addressRegion: "NC" },
+    ],
     url: `https://www.lavmotors.com/services/${service.slug}`,
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.lavmotors.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.lavmotors.com/services" },
+      { "@type": "ListItem", position: 3, name: service.title, item: `https://www.lavmotors.com/services/${service.slug}` },
+    ],
   };
 
   return (
     <>
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
     <div className="pt-24 pb-24">
       {/* Hero */}
       <section className="relative">

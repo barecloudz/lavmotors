@@ -10,8 +10,19 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.lavmotors.com" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://www.lavmotors.com/services" },
+    ],
+  };
+
   return (
-    <div className="pt-24">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <div className="pt-24">
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
@@ -88,5 +99,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
