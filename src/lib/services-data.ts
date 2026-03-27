@@ -89,7 +89,7 @@ export const services: Service[] = [
     icon: CircleDot,
     title: "Tires",
     shortDescription:
-      "Full tire inventory in stock. Mounting, balancing, rotation, and flat repair.",
+      "Brand new tires at the best prices in town. Radar & Falken tires, 3–4 day delivery. Mounting, balancing, rotation, and flat repair.",
     price: "Mount & balance from $26.99/tire",
     highlight: false,
     image: "/tires.avif",
@@ -98,14 +98,14 @@ export const services: Service[] = [
       agitate:
         "That's what hydroplaning feels like on worn tires, and it happens fast with zero warning. Tire tread doesn't always wear down evenly. Heat, alignment issues, and under-inflation can create bald spots while the rest of the tire still looks okay. Bald tires in wet conditions are one of the leading causes of loss-of-control accidents. And if a weakened tire blows at highway speed, you'll have fractions of a second to react. NC summers cook rubber faster than most drivers realize. A tire that looks fine in spring can be dangerously thin by August.",
       solution:
-        "We keep a large selection of tires in stock for all makes and models. You don't have to wait days for an order. Come in, we'll check your tread depth and wear patterns, help you pick the right tire for your vehicle and budget, and get them mounted and balanced the same day.",
+        "At LAV Motors, we offer some of the best tire prices in Hendersonville — brand new Radar and Falken tires ordered specifically for your vehicle. Most orders arrive in 3–4 days, with expedited shipping available if you need them faster. We'll check your tread depth and wear patterns, help you pick the right tire for your vehicle and budget, and get them mounted and balanced the day they arrive.",
     },
     howItHappens:
       "Tires wear down as the rubber makes contact with the road over thousands of miles. When tread depth drops below 2/32\", the grooves that channel water away from the contact patch become too shallow. Water sits between the tire and the road and you lose traction. Blowouts happen when a weakened tire can't handle the heat and pressure of highway driving. Uneven wear (bald on the edges, fine in the middle, or vice versa) usually points to an alignment or inflation problem, and that uneven wear will repeat on brand-new tires if the underlying issue isn't fixed.",
     howWeFix:
       "We start with a tread depth check and a visual inspection for wear patterns, bulges, and sidewall damage. If you need tires, we'll help you find the right match for your vehicle and how you drive. We're not going to oversell you on something you don't need. After mounting, we balance every tire on our balancing machine and torque your lug nuts to spec. If your wear pattern suggests an alignment issue, we'll let you know before we put new tires on so they don't wear the same way.",
     included: [
-      "Tire sales, all major brands, most sizes in stock",
+      "Tire sales — Radar and Falken tires, brand new, ordered to your specs",
       "Professional mounting and balancing",
       "Tire rotation",
       "Flat tire repair (when repairable)",
@@ -113,11 +113,11 @@ export const services: Service[] = [
       "Old tire disposal",
     ],
     whyUs: [
-      "Large in-stock inventory, no waiting for orders in most cases",
+      "Best tire prices in Hendersonville — brand new, not used or recapped",
       "Honest recommendations based on your budget and driving habits",
       "We check for alignment issues before mounting new tires",
       "Modern mounting and balancing equipment",
-      "Same-day service for most tire work",
+      "3–4 day delivery, expedited shipping available",
     ],
     faq: [
       {
@@ -133,7 +133,7 @@ export const services: Service[] = [
       {
         question: "Do I need to make an appointment?",
         answer:
-          "Walk-ins are welcome. Calling ahead helps us confirm we have your size in stock and can reduce your wait.",
+          "Call ahead so we can order your size and get them ready. Most tires arrive in 3–4 days, with expedited shipping available if you need them sooner.",
       },
     ],
   },
