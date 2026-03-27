@@ -23,6 +23,17 @@ export const metadata: Metadata = {
     default: "LAV Motors | Auto Repair & Tire Center in Hendersonville, NC",
     template: "%s | LAV Motors",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" },
+    ],
+  },
   description:
     "LAV Motors (Luxury Auto Vehicles). Trusted auto repair, tire sales, detailing and NC inspections in Hendersonville, NC. 30+ years experience. Call (828) 989-8985.",
   keywords: [
@@ -43,6 +54,18 @@ export const metadata: Metadata = {
     siteName: "LAV Motors",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://www.lavmotors.com/hero.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "LAV Motors auto repair shop in Hendersonville, NC",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.lavmotors.com/hero.jpeg"],
   },
   robots: {
     index: true,

@@ -37,7 +37,7 @@ export const services: Service[] = [
     title: "NC State Inspection",
     shortDescription:
       "Official NC inspection station. Walk-ins welcome. Most inspections done in under 30 minutes.",
-    price: "$13.60",
+    price: "From $13.60",
     highlight: true,
     image: null,
     pas: {
@@ -53,7 +53,7 @@ export const services: Service[] = [
       "We run through the full NC inspection checklist top to bottom. If you pass, you get your sticker and you're done. If something fails (worn brake pads, a burnt-out light, low tread depth), we'll show you exactly what the issue is and give you a straightforward quote to fix it. Most common inspection failures are things we can repair the same day so you can get your sticker without a second trip.",
     included: [
       "Full NC safety inspection (brakes, lights, steering, wipers, horn, seat belts)",
-      "Emissions OBD-II scan where applicable",
+      "Emissions OBD-II scan (required in some counties, $30 additional)",
       "Tire tread depth check",
       "Windshield and glass inspection",
       "NC inspection sticker upon passing",
@@ -80,7 +80,7 @@ export const services: Service[] = [
       {
         question: "Does my county require emissions testing?",
         answer:
-          "Emissions testing is required in 19 NC counties. If your county requires it, we'll perform the OBD-II scan as part of the inspection process.",
+          "Emissions testing (OBD-II scan) is required in some NC counties including Buncombe. The safety inspection is $13.60; the OBD test is an additional $30. If your county requires it, we'll perform both as part of the inspection process.",
       },
     ],
   },
@@ -90,7 +90,7 @@ export const services: Service[] = [
     title: "Tires",
     shortDescription:
       "Full tire inventory in stock. Mounting, balancing, rotation, and flat repair.",
-    price: "Varies by size",
+    price: "Mount & balance from $26.99/tire",
     highlight: false,
     image: "/tires.avif",
     pas: {
@@ -142,14 +142,14 @@ export const services: Service[] = [
     icon: Droplets,
     title: "Oil Change",
     shortDescription:
-      "Conventional and synthetic oil changes. Quick, no-appointment service.",
-    price: "From $85",
+      "Mobil-1 Full Synthetic oil changes. Quick, no-appointment service.",
+    price: "From $110",
     highlight: false,
     image: "/oil-change.avif",
     pas: {
       hook: "You keep meaning to get an oil change. Life gets busy. Work, kids, errands. Three thousand miles past due turns into five thousand. The car still starts every morning. It still drives. You tell yourself it's fine.",
       agitate:
-        "Here's what's happening inside your engine while you wait: oil breaks down. It stops lubricating and starts forming sludge, a thick dark buildup that coats the tiny passages oil needs to travel through to reach your pistons, bearings, and valves. Once sludge sets in, it doesn't just wash away with a fresh oil change. Engines that get neglected long enough need full teardowns to clean out, and some can't be saved. We've seen it. A repair that costs thousands of dollars, for a problem that costs under a hundred bucks to prevent. NC summers make this worse too. Heat doubles the rate at which oil oxidizes and degrades.",
+        "Here's what's happening inside your engine while you wait: oil breaks down. It stops lubricating and starts forming sludge, a thick dark buildup that coats the tiny passages oil needs to travel through to reach your pistons, bearings, and valves. Once sludge sets in, it doesn't just wash away with a fresh oil change. Engines that get neglected long enough need full teardowns to clean out, and some can't be saved. We've seen it. A repair that costs thousands of dollars, for a problem that costs around $110 to prevent. NC summers make this worse too. Heat doubles the rate at which oil oxidizes and degrades.",
       solution:
         "An oil change at LAV Motors takes about 30 minutes. No appointment needed. We use the grade and type your vehicle manufacturer specifies, swap the filter, top off your fluids, do a quick visual inspection of what we can see while we're underneath, and you're back on the road.",
     },
@@ -158,7 +158,7 @@ export const services: Service[] = [
     howWeFix:
       "We drain the old oil completely, replace the oil filter, and refill with the correct oil type and grade for your vehicle. If we find signs of sludge buildup, we'll let you know and discuss whether an engine flush makes sense. While the car is up, we do a visual check of belts, hoses, leaks, and tire condition. Not to manufacture upsells, but because catching something obvious while we're already under there takes 60 seconds and might save you a roadside breakdown.",
     included: [
-      "Full oil drain and refill (conventional, synthetic blend, or full synthetic)",
+      "Full oil drain and refill (Mobil-1 Full Synthetic)",
       "New oil filter",
       "Fluid top-off (washer fluid, coolant level check)",
       "Tire pressure check",
@@ -181,7 +181,7 @@ export const services: Service[] = [
       {
         question: "What kind of oil do you use?",
         answer:
-          "Whatever your vehicle manufacturer calls for. We carry conventional, synthetic blend, and full synthetic. We follow the spec, not a one-size-fits-all approach.",
+          "We use Mobil-1 Full Synthetic Engine Oil exclusively. It's the best protection available, and it's the only oil we trust in your engine.",
       },
       {
         question: "Do I need an appointment?",
@@ -196,7 +196,7 @@ export const services: Service[] = [
     title: "Wheel Alignment",
     shortDescription:
       "Computerized alignment to stop uneven tire wear and fix a pulling car.",
-    price: "$140",
+    price: "From $140 ($155 European)",
     highlight: false,
     image: "/car-alignment.avif",
     pas: {
@@ -204,7 +204,7 @@ export const services: Service[] = [
       agitate:
         "A car pulling to one side, a steering wheel that sits crooked when you're going straight, vibration through the wheel. These are classic bad alignment symptoms and they don't fix themselves. Every mile you drive misaligned, your tires are wearing unevenly and wearing out faster. Your fuel economy drops because the drivetrain is fighting against itself. Your suspension components take more stress than they were designed for. Put a brand-new set of tires on a misaligned car and they'll show the same uneven wear within 10,000 miles.",
       solution:
-        "Our computerized alignment system measures your wheel angles to a fraction of a degree and compares them against your vehicle's factory specs. We adjust camber, caster, and toe until everything is back where it should be. You get a printed before-and-after report showing exactly what changed. Flat $140, no hidden fees.",
+        "Our computerized alignment system measures your wheel angles to a fraction of a degree and compares them against your vehicle's factory specs. We adjust camber, caster, and toe until everything is back where it should be. You get a printed before-and-after report showing exactly what changed. Starting at $140 for most vehicles, $155 for European makes. No hidden fees.",
     },
     howItHappens:
       "Your wheels are set at precise angles from the factory. Camber is how much the wheel tilts in or out. Toe is whether the wheels point slightly inward or outward. Caster affects steering stability. These angles are designed to keep your tires wearing evenly and your car tracking straight. They get knocked out of spec by hitting a pothole or curb hard, by worn shocks or struts that can no longer hold the suspension geometry, or just by gradual wear in steering and suspension components over time. NC roads with their potholes, rough patches, and mountain terrain are tough on alignment.",
@@ -219,7 +219,7 @@ export const services: Service[] = [
     ],
     whyUs: [
       "State-of-the-art computerized alignment machine with factory specs for all makes",
-      "Flat $140, no hidden fees or surprise charges",
+      "From $140 (most vehicles) or $155 (European makes), no hidden fees or surprise charges",
       "We show you the before and after data so you know exactly what was done",
       "We flag suspension wear that will cause alignment to drift again",
       "Experienced technicians who understand the full picture, not just the numbers",
@@ -248,7 +248,7 @@ export const services: Service[] = [
     title: "Brake Service",
     shortDescription:
       "Brake pad replacement, rotor service, and fluid flush by certified technicians.",
-    price: "Variable",
+    price: "Avg. $165/axle",
     highlight: false,
     image: "/brake-service.avif",
     pas: {
@@ -301,7 +301,7 @@ export const services: Service[] = [
     title: "A/C Service",
     shortDescription:
       "AC not blowing cold? We diagnose and fix all car air conditioning issues.",
-    price: "Variable",
+    price: "From $140 + gas",
     highlight: false,
     image: "/ac-services.avif",
     pas: {
@@ -408,7 +408,7 @@ export const services: Service[] = [
     title: "Diagnostic Check",
     shortDescription:
       "Check engine light on? We find the real cause, not just the code.",
-    price: "From $60",
+    price: "Basic $135 / Advanced $195",
     highlight: false,
     image: "/diagnostic-check.avif",
     pas: {
