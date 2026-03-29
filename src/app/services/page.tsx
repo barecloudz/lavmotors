@@ -26,12 +26,12 @@ export default function ServicesPage() {
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
-            <h1 className="text-sm font-semibold uppercase tracking-widest text-primary">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
               Our Services
-            </h1>
-            <p className="mt-3 text-5xl font-bold tracking-tight text-foreground">
-              Everything Under One Roof
             </p>
+            <h1 className="mt-3 text-5xl font-bold tracking-tight text-foreground">
+              Auto Repair Services in Hendersonville, NC
+            </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted">
               Whether it&apos;s a routine oil change or a repair that&apos;s
               been keeping you up at night, our team has been handling it all

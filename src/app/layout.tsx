@@ -71,9 +71,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: "https://www.lavmotors.com",
-  },
+  metadataBase: new URL("https://www.lavmotors.com"),
 };
 
 export default function RootLayout({

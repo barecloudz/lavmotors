@@ -7,10 +7,10 @@ export function OpenStatus() {
   const minutes = et.getHours() * 60 + et.getMinutes();
 
   let isOpen = false;
-  if (day >= 1 && day <= 5) {
-    isOpen = minutes >= 480 && minutes < 1140; // 8AM–7PM
-  } else if (day === 6) {
-    isOpen = minutes >= 480 && minutes < 1020; // 8AM–5PM
+  if (day >= 1 && day <= 6) {
+    isOpen = minutes >= 540 && minutes < 1140; // Mon–Sat 9AM–7PM
+  } else if (day === 0) {
+    isOpen = minutes >= 720 && minutes < 1140; // Sun 12PM–7PM
   }
 
   return (

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return {
-    title: service.title,
+    title: `${service.title} in Hendersonville, NC`,
     description: `${service.shortDescription} Expert auto service in Hendersonville, NC. Call (828) 989-8985.`,
   };
 }

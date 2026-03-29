@@ -44,7 +44,7 @@ export function CTA() {
             </div>
 
             <p className="mt-8 text-xs text-white/30">
-              Mon–Fri 8AM–7PM &nbsp;·&nbsp; Sat 8AM–5PM &nbsp;·&nbsp;
+              Mon–Sat 9AM–7PM &nbsp;·&nbsp; Sun 12PM–7PM &nbsp;·&nbsp;
               1105 Spartanburg Hwy, Hendersonville NC
             </p>
           </div>

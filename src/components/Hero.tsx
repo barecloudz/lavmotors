@@ -5,10 +5,10 @@ import { OpenStatus } from "@/components/OpenStatus";
 
 const highlights = [
   "NC State Inspections: $13.60",
-  "Oil Changes from $85",
-  "Wheel Alignment: $140",
+  "Oil Changes from $110 (Mobil-1 Full Synthetic)",
+  "Wheel Alignment from $140",
   "Full Detailing from $249",
-  "Tires In Stock, All Sizes",
+  "Brand New Tires — Radar & Falken, 3–4 Day Delivery",
 ];
 
 export function Hero() {

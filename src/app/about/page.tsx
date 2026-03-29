@@ -41,12 +41,12 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6">
           <div className="grid items-center gap-16 lg:grid-cols-2">
             <div>
-              <h1 className="text-sm font-semibold uppercase tracking-widest text-primary">
+              <p className="text-sm font-semibold uppercase tracking-widest text-primary">
                 About Us
-              </h1>
-              <p className="mt-3 text-5xl font-bold tracking-tight text-foreground">
-                Luxury Auto Vehicles
               </p>
+              <h1 className="mt-3 text-5xl font-bold tracking-tight text-foreground">
+                Luxury Auto Vehicles — Hendersonville Auto Repair
+              </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted">
                 Welcome to LAV Motors, your complete auto repair center, tire
                 dealer, and auto detailing center in Hendersonville, North
@@ -148,11 +148,9 @@ export default function AboutPage() {
                       Hours
                     </div>
                     <div className="mt-1 text-muted">
-                      Mon–Fri: 8:00 AM – 7:00 PM
+                      Mon–Sat: 9:00 AM – 7:00 PM
                       <br />
-                      Sat: 8:00 AM – 5:00 PM
-                      <br />
-                      Sun: Closed
+                      Sun: 12:00 PM – 7:00 PM
                     </div>
                   </div>
                 </div>

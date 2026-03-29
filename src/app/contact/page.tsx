@@ -14,12 +14,12 @@ export default function ContactPage() {
       <section className="py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="max-w-2xl">
-            <h1 className="text-sm font-semibold uppercase tracking-widest text-primary">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">
               Contact Us
-            </h1>
-            <p className="mt-3 text-5xl font-bold tracking-tight text-foreground">
-              Get In Touch
             </p>
+            <h1 className="mt-3 text-5xl font-bold tracking-tight text-foreground">
+              Contact LAV Motors in Hendersonville, NC
+            </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted">
               Have a question or need to schedule a service? Call us, stop by,
               or fill out the form and we&apos;ll get back to you.
