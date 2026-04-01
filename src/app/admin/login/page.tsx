@@ -17,10 +17,7 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
       setError("Invalid email or password.");
@@ -34,27 +31,26 @@ export default function LoginPage() {
 
   return (
     <div className="w-full max-w-sm">
-      <div className="rounded-2xl border border-[#1e1e1e] bg-[#111] p-8">
-        {/* Logo */}
+      <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
         <div className="mb-8 text-center">
           <p className="text-[10px] font-bold tracking-widest text-[#c9932c] uppercase">
             Luxury Auto Vehicles
           </p>
-          <p className="mt-1 text-2xl font-bold tracking-tight text-white">
+          <p className="mt-1 text-2xl font-bold tracking-tight text-gray-900">
             LAV Motors
           </p>
-          <p className="mt-2 text-sm text-[#666]">Admin Portal</p>
+          <p className="mt-1 text-sm text-gray-500">Admin Portal</p>
         </div>
 
         {error && (
-          <div className="mb-5 rounded-lg border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">
+          <div className="mb-5 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
             {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-xs font-medium text-[#888] mb-1.5">
+            <label className="block text-xs font-medium text-gray-600 mb-1.5">
               Email
             </label>
             <input
@@ -63,13 +59,13 @@ export default function LoginPage() {
               onChange={(e) => setEmail(e.target.value)}
               required
               autoComplete="email"
-              className="w-full rounded-lg border border-[#2a2a2a] bg-[#1a1a1a] px-4 py-3 text-sm text-white placeholder:text-[#555] outline-none transition-colors focus:border-[#c9932c]/50 focus:ring-1 focus:ring-[#c9932c]/20"
+              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition-colors focus:border-[#c9932c] focus:ring-2 focus:ring-[#c9932c]/10"
               placeholder="admin@lavmotors.com"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-medium text-[#888] mb-1.5">
+            <label className="block text-xs font-medium text-gray-600 mb-1.5">
               Password
             </label>
             <input
@@ -78,7 +74,7 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               required
               autoComplete="current-password"
-              className="w-full rounded-lg border border-[#2a2a2a] bg-[#1a1a1a] px-4 py-3 text-sm text-white placeholder:text-[#555] outline-none transition-colors focus:border-[#c9932c]/50 focus:ring-1 focus:ring-[#c9932c]/20"
+              className="w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 outline-none transition-colors focus:border-[#c9932c] focus:ring-2 focus:ring-[#c9932c]/10"
               placeholder="••••••••"
             />
           </div>

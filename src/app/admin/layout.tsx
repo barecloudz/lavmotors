@@ -7,6 +7,8 @@ import {
   LayoutDashboard,
   FileText,
   Mail,
+  Car,
+  Settings,
   Menu,
   X,
   LogOut,
@@ -17,6 +19,8 @@ const navItems = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/blog", label: "Blog Posts", icon: FileText, exact: false },
   { href: "/admin/contacts", label: "Contacts", icon: Mail, exact: false },
+  { href: "/admin/vehicles", label: "Vehicles", icon: Car, exact: false },
+  { href: "/admin/settings", label: "Settings", icon: Settings, exact: false },
 ];
 
 function Sidebar({
@@ -29,19 +33,19 @@ function Sidebar({
   onLogout: () => void;
 }) {
   return (
-    <div className="flex h-full flex-col">
+    <div className="flex h-full flex-col bg-white">
       {/* Logo */}
-      <div className="flex items-center justify-between border-b border-[#1e1e1e] px-5 py-5">
+      <div className="flex items-center justify-between border-b border-gray-100 px-5 py-5">
         <div>
           <p className="text-[10px] font-bold tracking-widest text-[#c9932c] uppercase">
             LAV Motors
           </p>
-          <p className="mt-0.5 text-sm font-semibold text-white">Admin Panel</p>
+          <p className="mt-0.5 text-sm font-semibold text-gray-900">Admin Panel</p>
         </div>
         {onClose && (
           <button
             onClick={onClose}
-            className="text-[#666] transition-colors hover:text-white"
+            className="text-gray-400 transition-colors hover:text-gray-700"
           >
             <X size={18} />
           </button>
@@ -51,13 +55,9 @@ function Sidebar({
       {/* Nav */}
       <nav className="flex-1 space-y-0.5 px-3 py-4">
         {navItems.map((item) => {
-          const active = item.exact
-            ? pathname === item.href
-            : pathname.startsWith(item.href) && pathname !== "/admin";
           const isActive = item.exact
             ? pathname === item.href
             : pathname.startsWith(item.href);
-
           return (
             <Link
               key={item.href}
@@ -65,8 +65,8 @@ function Sidebar({
               onClick={onClose}
               className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
                 isActive
-                  ? "bg-[#c9932c]/15 text-[#c9932c]"
-                  : "text-[#777] hover:bg-white/5 hover:text-white"
+                  ? "bg-[#c9932c]/10 text-[#c9932c]"
+                  : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
               }`}
             >
               <item.icon size={16} />
@@ -77,10 +77,10 @@ function Sidebar({
       </nav>
 
       {/* Sign out */}
-      <div className="border-t border-[#1e1e1e] px-3 py-3">
+      <div className="border-t border-gray-100 px-3 py-3">
         <button
           onClick={onLogout}
-          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-[#666] transition-colors hover:bg-red-500/10 hover:text-red-400"
+          className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-gray-400 transition-colors hover:bg-red-50 hover:text-red-500"
         >
           <LogOut size={16} />
           Sign out
@@ -106,33 +106,32 @@ export default function AdminLayout({
     router.refresh();
   }
 
-  // Login page: no sidebar
   if (pathname === "/admin/login") {
     return (
-      <div className="min-h-screen bg-[#0d0d0d] flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
         {children}
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#0d0d0d] text-[#e0e0e0]">
+    <div className="min-h-screen bg-gray-50 text-gray-900">
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-56 border-r border-[#1e1e1e] bg-[#111] md:block">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-56 border-r border-gray-200 bg-white md:block">
         <Sidebar pathname={pathname} onLogout={handleLogout} />
       </aside>
 
       {/* Mobile: backdrop */}
       {open && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 md:hidden"
+          className="fixed inset-0 z-40 bg-black/30 md:hidden"
           onClick={() => setOpen(false)}
         />
       )}
 
       {/* Mobile: drawer */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 w-64 border-r border-[#1e1e1e] bg-[#111] transition-transform duration-300 md:hidden ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 border-r border-gray-200 bg-white transition-transform duration-300 md:hidden ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -146,10 +145,10 @@ export default function AdminLayout({
       {/* Main */}
       <div className="flex min-h-screen flex-col md:pl-56">
         {/* Mobile top bar */}
-        <header className="sticky top-0 z-20 flex items-center justify-between border-b border-[#1e1e1e] bg-[#111] px-4 py-3 md:hidden">
+        <header className="sticky top-0 z-20 flex items-center justify-between border-b border-gray-200 bg-white px-4 py-3 md:hidden">
           <button
             onClick={() => setOpen(true)}
-            className="text-[#777] transition-colors hover:text-white"
+            className="text-gray-400 transition-colors hover:text-gray-700"
           >
             <Menu size={20} />
           </button>
