@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: "https://www.lavmotors.com",
   generateRobotsTxt: true,
-  outDir: "./out",
+  outDir: "./public",
   changefreq: "weekly",
   priority: 0.7,
   transform: async (config, path) => {

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.lavmotors.com
+
+# Sitemaps
+Sitemap: https://www.lavmotors.com/sitemap.xml
