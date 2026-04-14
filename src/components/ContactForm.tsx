@@ -36,6 +36,7 @@ export function ContactForm() {
           phone: data.get("phone"),
           service: data.get("service"),
           vehicle: data.get("vehicle"),
+          vin: data.get("vin"),
           message: data.get("message"),
         }),
       });
@@ -169,6 +170,23 @@ export function ContactForm() {
             name="vehicle"
             type="text"
             placeholder="e.g. 2019 Ford F-150"
+            className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted/60 outline-none transition-colors focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="vin"
+            className="block text-sm font-medium text-foreground"
+          >
+            VIN{" "}
+            <span className="text-muted font-normal">(optional — but we&apos;ll need this to get started)</span>
+          </label>
+          <input
+            id="vin"
+            name="vin"
+            type="text"
+            placeholder="e.g. 1HGBH41JXMN109186"
             className="mt-2 w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted/60 outline-none transition-colors focus:border-primary/50 focus:ring-2 focus:ring-primary/10"
           />
         </div>

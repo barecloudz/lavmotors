@@ -12,6 +12,7 @@ function buildEmailHtml({
   phone,
   service,
   vehicle,
+  vin,
   message,
 }: {
   name: string;
@@ -19,6 +20,7 @@ function buildEmailHtml({
   phone?: string;
   service?: string;
   vehicle?: string;
+  vin?: string;
   message: string;
 }) {
   const row = (labels: string[], left: string, right?: string) => `
@@ -48,7 +50,7 @@ function buildEmailHtml({
         <tr><td style="background:#111111;border:1px solid #222;border-top:none;border-bottom:none;padding:36px 40px 28px;">
           ${row(["Full Name", "Phone"], name, phone || "—")}
           ${row(["Email", "Service"], `<a href="mailto:${email}" style="color:#ffffff;text-decoration:underline;">${email}</a>`, service || "—")}
-          ${vehicle ? `<p style="margin:0 0 6px 0;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#c9a84c;font-family:sans-serif;">Vehicle</p><p style="margin:0 0 28px 0;font-size:17px;font-weight:700;color:#ffffff;font-family:sans-serif;">${vehicle}</p>` : ""}
+          ${vehicle || vin ? `${row(["Vehicle", "VIN"], vehicle || "—", vin || "—")}` : ""}
           <div style="height:1px;background:#222;margin-bottom:28px;"></div>
           <p style="margin:0 0 12px 0;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:#c9a84c;font-family:sans-serif;">Message</p>
           <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-left:3px solid #c9a84c;border-radius:0 8px 8px 0;padding:20px 24px;">
@@ -73,7 +75,7 @@ function buildEmailHtml({
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, service, vehicle, message } = body;
+    const { name, email, phone, service, vehicle, vin, message } = body;
 
     if (!name || !email || !message) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -87,6 +89,7 @@ export async function POST(request: Request) {
       phone: phone || null,
       service: service || null,
       vehicle: vehicle || null,
+      vin: vin || null,
       message,
     });
 
@@ -96,7 +99,7 @@ export async function POST(request: Request) {
       to: TO_EMAIL,
       replyTo: email,
       subject: `New inquiry${service ? ` — ${service}` : ""} from ${name}`,
-      html: buildEmailHtml({ name, email, phone, service, vehicle, message }),
+      html: buildEmailHtml({ name, email, phone, service, vehicle, vin, message }),
     });
 
     return NextResponse.json({ success: true });
