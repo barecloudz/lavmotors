@@ -3,6 +3,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { Services } from "@/components/Services";
 import { BlogSlider } from "@/components/BlogSlider";
 import { Reviews } from "@/components/Reviews";
+import { HiringBanner } from "@/components/HiringBanner";
 import { CTA } from "@/components/CTA";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Services />
       <BlogSlider />
       <Reviews />
+      <HiringBanner />
       <CTA />
     </>
   );
